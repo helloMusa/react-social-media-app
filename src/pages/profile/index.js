@@ -46,7 +46,8 @@ function Profile() {
                     id="fileInput"
                     type="file" 
                     accept="image/*" 
-                    onChange={handleImageChange} />
+                    // onChange={handleImageChange} 
+                    />
                 </div>
                 <div className="profile_info">
                     <EditText

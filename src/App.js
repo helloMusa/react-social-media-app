@@ -13,7 +13,7 @@ function App() {
       <div className="app">
         <Navbar />
         <Switch>
-          <Route path="/:username" children={<Profile />} />
+          <Route path="/profile/:username" children={<Profile />} />
           <Route path="/">
             <Home />
           </Route>
