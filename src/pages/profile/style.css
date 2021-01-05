@@ -1,0 +1,27 @@
+.profile {
+    background-color: #f3f2ef;
+    min-height: 100vh;
+}
+
+.profile_main {
+    justify-content: center;
+    display: flex;
+    padding: 16px;
+}
+
+.profile_imageUpload > input {
+    display: none;
+}
+
+.profile_img {
+    cursor: pointer;
+    margin-right: 80px;
+}
+
+.profile_counts {
+    margin-top: 5px;
+}
+
+.profile_bio {
+    margin-top: 5px;
+}
