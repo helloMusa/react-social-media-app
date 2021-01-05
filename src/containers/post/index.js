@@ -4,6 +4,8 @@ import { Comment } from '../../components';
 import { db, storage } from "../../firebase";
 import CommentInput from '../../components/comment-input';
 import { UserContext } from '../../contexts/user';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 function Post({
     profileUrl, 
@@ -62,6 +64,11 @@ function Post({
 
             <div className="post_center">
                 <img className="post_photo" src={photoUrl} />
+            </div>
+
+            <div className="post_like">
+                <FavoriteBorderIcon />
+                <p style={{ marginLeft: "8px" }}>2 likes</p>
             </div>
 
             <div>

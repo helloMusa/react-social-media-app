@@ -36,7 +36,7 @@ function CreatePost() {
             uploadTask.on("state_changed", (snapshot) => {
                 // track progress (1%, 2%, ..., 100%)
                 const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-                setProgress(progress);
+                setProgress(`${progress}%`);
 
             }, (error) => {
                  console.log(error);
@@ -103,8 +103,7 @@ function CreatePost() {
                 </div>
             ) : (
                 <div>
-                    <SignInBtn />
-                    <p style={{ marginLeft: "12px" }}>to Post & Comment</p>
+                    <p style={{ marginLeft: "12px" }}>Sign In to Post & Comment</p>
                 </div>
             )}
         </div>

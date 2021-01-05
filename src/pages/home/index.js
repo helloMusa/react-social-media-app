@@ -1,15 +1,12 @@
 import React from 'react';
 import "./style.css";
-import { SignInBtn } from '../../components';
-import { CreatePost, Navbar } from '../../containers';
-import Feed from '../../containers/feed';
+import { CreatePost, Feed } from '../../containers';
 
 function Home() {
     return (
         <div className="home">
-            <Navbar />
             <CreatePost />
-            <Feed />
+            <Feed username={""}/>
         </div>
     );
 }

@@ -4,16 +4,29 @@ import { Post } from '..';
 import { db } from "../../firebase";
 
 
-function Feed() {
+function Feed({username}) {
 
     const [posts, setPosts] = useState([]);
     
     useEffect(() => {
-        db.collection("posts")
-            .orderBy("timestamp", "desc").onSnapshot((snapshot) => 
-        {
-            setPosts(snapshot.docs.map((doc) => ({id: doc.id, post: doc.data() })));
-        })
+        if (username == "") {
+            console.log("no username");
+            db.collection("posts")
+            .orderBy("timestamp", "desc").onSnapshot((snapshot) => {
+                setPosts(snapshot.docs.map((doc) => (
+                    { id: doc.id, post: doc.data() }
+                )));
+            });
+        } else if (username != "") {
+            console.log(username);
+            db.collection("posts")
+            .where("username", "==", username)
+            .orderBy("timestamp", "desc").onSnapshot((snapshot) => {
+                setPosts(snapshot.docs.map((doc) => (
+                    { id: doc.id, post: doc.data() }
+                )));
+            });
+        }
     }, [])
 
     return (
