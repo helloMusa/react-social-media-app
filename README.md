@@ -1,6 +1,6 @@
 # react-social-media-app
 
-Production Server: https://react-social-app-24b28.web.app/
+Demo: https://react-social-app-24b28.web.app/
 
 ## Available Scripts
 
